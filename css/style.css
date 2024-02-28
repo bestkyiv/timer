@@ -11,7 +11,6 @@
 }
 
 body {
-  background: #DBE1D5;
   height: 100vh;
   overflow: hidden;
 }
@@ -70,7 +69,7 @@ body {
 
 #clock {
   font: 15vw 'Digital';
-  color: #ff0000;
+  color: #FFFFFF;
 }
 
 #clock .digit {
@@ -80,6 +79,11 @@ body {
 }
 
 #background {
+  background-image: url("../img/timer-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -100,30 +104,6 @@ body {
   opacity: .5;
 }
 
-#background .circle.blue {
-  background: url(../circle-blue.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-#background .circle.red {
-  background: url(../circle-red.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-#background .triangle.blue {
-  background: url(../triangle-blue.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-#background .triangle.red {
-  background: url(../triangle-red.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 #tools {
   top: 63vh;
   position: absolute;
@@ -140,7 +120,7 @@ body {
 }
 
 #start, #restart {
-  width: 2w;
+  width: 2vw;
   height: 2vw;
   margin: .5vw;
   cursor: pointer;
@@ -172,6 +152,6 @@ body {
 }
 
 #type .option.active {
-  color: #ff0000;
+  color: #FFFFFF;
   font-weight: bold;
 }

@@ -1,238 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>INT20H - Timer</title>
-  <link href="favicon.png" type="image/png" rel="icon" type="image/x-icon" />
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div id="logos" class="hidden">
-    <img src="logos/int20h.png">
-    <img src="logos/evo.png">
-    <img src="logos/1+1%20media.png">
-    <img src="logos/beetroot.svg">
-    <img src="logos/beetroot%20academy.png">
-    <img src="logos/exit%20games.jpg">
-    <img src="logos/genesis.png">
-    <img src="logos/uklon.png">
-    <img src="logos/prog.png">
-    <img src="logos/bergamot%20.png">
-    <img src="logos/cyberzone.png">
-    <img src="logos/idea%20grafika.png">
-    <img src="logos/vovkulaka.png">
-    <img src="logos/vr%20galaxy.png">
-    <img src="logos/igromag.png">
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>INT20H - Timer</title>
+    <link href="favicon.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="logos" class="hidden">
+      <img src="logos/evo.svg" />
+      <img src="logos/modus-x.svg" />
+      <img src="logos/anbosoft.svg" />
+      <img src="logos/logitech.svg" />
 
-  <div id="timer">
-    <div id="clock">
-      <span class="hours"><span class="first digit">2</span><span class="second digit">0</span></span>:<span class="minutes"><span class="first digit">0</span><span class="second digit">0</span></span>:<span class="seconds"><span class="first digit">0</span><span class="second digit">0</span></span>
+      <img src="logos/skelar.svg" />
+      <img src="logos/dim-ria.svg" />
+      <img src="logos/futura-group.svg" />
+
+      <img src="logos/support-your-app.svg" />
+      <img src="logos/sombra.svg" />
+      <img src="logos/robocode.svg" />
+      <img src="logos/unicorn.svg" />
+      <img src="logos/reprezent.svg" />
+      <img src="logos/tv7-studio.svg" />
+
+      <img src="logos/jooble.svg" />
+      <img src="logos/happy-monday.svg" />
+      <img src="logos/best.svg" />
+      <img src="logos/kpi.svg" />
     </div>
-    <div id="tools" class="hidden">
-      <div id="start">
-        <div class="play">
-          <svg width="1.5vw" height="1.5vw" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 41.999 41.999" style="enable-background:new 0 0 41.999 41.999;" xml:space="preserve">
-          <path fill="#ff0000" d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40
-              c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20
-              c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z"/>
-          </svg>
-        </div>
-        <div class="pause">
-          <svg width="1.5vw" height="1.5vw" viewBox="-45 0 327 327" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#ff0000" d="m158 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"/>
-            <path fill="#ff0000" d="m8 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"/>
-          </svg>
-        </div>
+
+    <div id="timer">
+      <div id="clock">
+        <span class="hours"
+          ><span class="first digit">2</span
+          ><span class="second digit">0</span></span
+        >:<span class="minutes"
+          ><span class="first digit">0</span
+          ><span class="second digit">0</span></span
+        >:<span class="seconds"
+          ><span class="first digit">0</span
+          ><span class="second digit">0</span></span
+        >
       </div>
-      <div id="restart">
-        <svg width="1.5vw" height="1.5vw" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 17.12 17.12" style="enable-background:new 0 0 17.12 17.12;" xml:space="preserve">
-          <path style="fill:#ff0000;" d="M8.661,0.001c0.006,0,0.01,0,0.01,0c0.007,0,0.007,0,0.011,0c0.002,0,0.007,0,0.009,0
+      <div id="tools" class="hidden">
+        <div id="start">
+          <div class="play">
+            <svg
+              width="1.5vw"
+              height="1.5vw"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 41.999 41.999"
+              style="enable-background: new 0 0 41.999 41.999"
+              xml:space="preserve"
+            >
+              <path
+                fill="#ffffff"
+                d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40
+              c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20
+              c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z"
+              />
+            </svg>
+          </div>
+          <div class="pause">
+            <svg
+              width="1.5vw"
+              height="1.5vw"
+              viewBox="-45 0 327 327"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#ffffff"
+                d="m158 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"
+              />
+              <path
+                fill="#ffffff"
+                d="m8 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"
+              />
+            </svg>
+          </div>
+        </div>
+        <div id="restart">
+          <svg
+            width="1.5vw"
+            height="1.5vw"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 17.12 17.12"
+            style="enable-background: new 0 0 17.12 17.12"
+            xml:space="preserve"
+          >
+            <path
+              style="fill: #ffffff"
+              d="M8.661,0.001c0.006,0,0.01,0,0.01,0c0.007,0,0.007,0,0.011,0c0.002,0,0.007,0,0.009,0
               c0,0,0,0,0.004,0c0.019-0.002,0.027,0,0.039,0c2.213,0,4.367,0.876,5.955,2.42l1.758-1.776c0.081-0.084,0.209-0.11,0.314-0.065
               c0.109,0.044,0.186,0.152,0.186,0.271l-0.294,6.066h-5.699c-0.003,0-0.011,0-0.016,0c-0.158,0-0.291-0.131-0.291-0.296
               c0-0.106,0.059-0.201,0.146-0.252l1.73-1.751c-1.026-0.988-2.36-1.529-3.832-1.529c-2.993,0.017-5.433,2.47-5.433,5.51
               c0.023,2.978,2.457,5.4,5.481,5.422c1.972-0.106,3.83-1.278,4.719-3.221l2.803,1.293l-0.019,0.039
-              c-1.92,3.713-4.946,5.277-8.192,4.944c-4.375-0.348-7.848-4.013-7.878-8.52C0.171,3.876,3.976,0.042,8.661,0.001z"/>
-        </svg>
-      </div>
-      <div id="type">
-        <div class="option coding active">coding</div>
-        <div class="option presentation">presentation</div>
-        <div class="option questions">questions</div>
+              c-1.92,3.713-4.946,5.277-8.192,4.944c-4.375-0.348-7.848-4.013-7.878-8.52C0.171,3.876,3.976,0.042,8.661,0.001z"
+            />
+          </svg>
+        </div>
+        <div id="type">
+          <div class="option coding active">coding</div>
+          <div class="option presentation">presentation</div>
+          <div class="option questions">questions</div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="background">
-    <div class="circle red" style="width:8vw;height:8vw;top:8vh;left:32vw"></div>
-    <div class="circle blue" style="width:11vw;height:11vw;top:32vh;left:8vw"></div>
-    <div class="circle blue" style="width:15vw;height:15vw;top:85vh;left:-3vw"></div>
-    <div class="circle blue" style="width:14vw;height:14vw;top:-10vh;left:90vw"></div>
-    <div class="circle red" style="width:12vw;height:12vw;top:74vh;left:68vw"></div>
-    <div class="triangle blue" style="width:16vw;height:16vw;top:-20vh;left:50vw;transform:rotate(47deg)"></div>
-    <div class="triangle blue" style="width:12vw;height:12vw;top:80vh;left:40vw;transform:rotate(45deg)"></div>
-    <div class="triangle red" style="width:14vw;height:14vw;top:-15vh;left:0vw;transform:rotate(-45deg)"></div>
-    <div class="triangle red" style="width:8vw;height:8vw;top:73vh;left:20vw;transform:rotate(30deg)"></div>
-    <div class="triangle red" style="width:10vw;height:10vw;top:20vh;left:78vw;transform:rotate(-60deg)"></div>
-    <div class="triangle blue" style="width:8vw;height:8vw;top:55vh;left:90vw;transform:rotate(20deg)"></div>
-  </div>
+    <div id="background"></div>
 
-  <script>
-    var hours = 20;
-    var minutes = 00;
-    var seconds = 00;
-    var interval;
-    var started = false;
-    var type = 'coding';
+    <script>
+      const logosIntervalInMinutes = 2;
+      var hours = 20;
+      var minutes = 00;
+      var seconds = 00;
+      var interval;
+      var started = false;
+      var type = "coding";
 
-    var logosContainer = document.getElementById('logos');
-    var logos = logosContainer.querySelectorAll('img');
-    var logosInterval;
-    var clock = document.getElementById('clock');
-    var hoursField = clock.querySelector('.hours');
-    var minutesField = clock.querySelector('.minutes');
-    var secondsField = clock.querySelector('.seconds');
+      var logosContainer = document.getElementById("logos");
+      var logos = logosContainer.querySelectorAll("img");
+      var logosInterval;
+      var clock = document.getElementById("clock");
+      var hoursField = clock.querySelector(".hours");
+      var minutesField = clock.querySelector(".minutes");
+      var secondsField = clock.querySelector(".seconds");
 
-    var tools = document.getElementById('tools');
-    var startButton = document.getElementById('start');
-    var restartButton = document.getElementById('restart');
-    var codingOption = tools.querySelector('#type .option.coding');
-    var presentationOption = tools.querySelector('#type .option.presentation');
-    var questionsOption = tools.querySelector('#type .option.questions');
+      var tools = document.getElementById("tools");
+      var startButton = document.getElementById("start");
+      var restartButton = document.getElementById("restart");
+      var codingOption = tools.querySelector("#type .option.coding");
+      var presentationOption = tools.querySelector(
+        "#type .option.presentation",
+      );
+      var questionsOption = tools.querySelector("#type .option.questions");
 
-    var bg = document.getElementById('background');
+      var bg = document.getElementById("background");
 
-    function reloadTimer() {
-      hoursField.querySelector('.first').textContent = hours < 10 ? 0 : Math.floor(hours/10);
-      hoursField.querySelector('.second').textContent = hours - Math.floor(hours/10) * 10;
+      function reloadTimer() {
+        hoursField.querySelector(".first").textContent =
+          hours < 10 ? 0 : Math.floor(hours / 10);
+        hoursField.querySelector(".second").textContent =
+          hours - Math.floor(hours / 10) * 10;
 
-      minutesField.querySelector('.first').textContent = minutes < 10 ? 0 : Math.floor(minutes/10);
-      minutesField.querySelector('.second').textContent = minutes - Math.floor(minutes/10) * 10;
+        minutesField.querySelector(".first").textContent =
+          minutes < 10 ? 0 : Math.floor(minutes / 10);
+        minutesField.querySelector(".second").textContent =
+          minutes - Math.floor(minutes / 10) * 10;
 
-      secondsField.querySelector('.first').textContent = seconds < 10 ? 0 : Math.floor(seconds/10);
-      secondsField.querySelector('.second').textContent = seconds - Math.floor(seconds/10) * 10;
-    }
+        secondsField.querySelector(".first").textContent =
+          seconds < 10 ? 0 : Math.floor(seconds / 10);
+        secondsField.querySelector(".second").textContent =
+          seconds - Math.floor(seconds / 10) * 10;
+      }
 
-    function recountTime() {
-      if(hours == 0 && minutes == 0 && seconds == 0) clearInterval(interval);
-      else if(seconds == 0) {
-        seconds = 59;
-        if(minutes > 0) minutes--;
-        else if(hours > 0) {
-          minutes = 59;
-          hours--;
+      function recountTime() {
+        if (hours === 0 && minutes === 0 && seconds === 0)
+          clearInterval(interval);
+        else if (seconds === 0) {
+          seconds = 59;
+          if (minutes > 0) minutes--;
+          else if (hours > 0) {
+            minutes = 59;
+            hours--;
+          }
+        } else seconds--;
+
+        reloadTimer();
+      }
+
+      function startTimer() {
+        startButton.classList.add("started");
+        started = true;
+        recountTime();
+        interval = setInterval(recountTime, 1000);
+        if (type === "coding")
+          logosInterval = setInterval(
+            showLogos,
+            logosIntervalInMinutes * 60 * 1000,
+          );
+        bg.classList.add("animate");
+      }
+
+      function pauseTimer() {
+        startButton.classList.remove("started");
+        started = false;
+        clearInterval(interval);
+        clearInterval(logosInterval);
+        bg.classList.remove("animate");
+      }
+
+      startButton.onclick = function () {
+        if (started) {
+          pauseTimer();
+        } else {
+          startTimer();
         }
-      }
-      else seconds--;
+      };
 
-      reloadTimer();
-    }
-
-    function startTimer() {
-      startButton.classList.add('started');
-      started = true;
-      recountTime();
-      interval = setInterval(recountTime, 1000);
-      if(type == 'coding') logosInterval = setInterval(showLogos, 180000);
-      bg.classList.add('animate');
-    }
-
-    function pauseTimer() {
-      startButton.classList.remove('started');
-      started = false;
-      clearInterval(interval);
-      clearInterval(logosInterval);
-      bg.classList.remove('animate');
-    }
-
-    startButton.onclick = function() {
-      if(started) {
+      restartButton.onclick = function () {
         pauseTimer();
+        switch (type) {
+          case "coding":
+            hours = 20;
+            minutes = 0;
+            seconds = 0;
+            break;
+          case "presentation":
+            hours = 0;
+            minutes = 5;
+            seconds = 0;
+            break;
+          case "qustions":
+            hours = 0;
+            minutes = 3;
+            seconds = 0;
+            break;
+        }
+        reloadTimer();
+      };
+
+      codingOption.onclick = function () {
+        pauseTimer();
+        codingOption.classList.add("active");
+        presentationOption.classList.remove("active");
+        questionsOption.classList.remove("active");
+        type = "coding";
+        hours = 20;
+        minutes = 0;
+        seconds = 0;
+        reloadTimer();
+      };
+
+      presentationOption.onclick = function () {
+        pauseTimer();
+        presentationOption.classList.add("active");
+        codingOption.classList.remove("active");
+        questionsOption.classList.remove("active");
+        type = "presentation";
+        hours = 0;
+        minutes = 5;
+        seconds = 0;
+        reloadTimer();
+      };
+
+      questionsOption.onclick = function () {
+        pauseTimer();
+        questionsOption.classList.add("active");
+        codingOption.classList.remove("active");
+        presentationOption.classList.remove("active");
+        type = "qustions";
+        hours = 0;
+        minutes = 3;
+        seconds = 0;
+        reloadTimer();
+      };
+
+      document.onmousemove = function () {
+        if (tools.classList.contains("hidden")) {
+          tools.classList.remove("hidden");
+          setTimeout(function () {
+            tools.classList.add("hidden");
+          }, 3000);
+        }
+        logosContainer.classList.add("hidden");
+        timer.classList.remove("hidden");
+      };
+
+      function showLogos() {
+        logosContainer.classList.remove("hidden");
+        timer.classList.add("hidden");
+
+        [].forEach.call(logos, function (logo, i) {
+          setTimeout(function () {
+            if (i) logos[i - 1].classList.remove("active");
+            logo.classList.add("active");
+            if (i + 1 === logos.length)
+              setTimeout(function () {
+                logo.classList.remove("active");
+              }, 3000);
+          }, 3000 * i);
+        });
+
+        setTimeout(function () {
+          logosContainer.classList.add("hidden");
+          timer.classList.remove("hidden");
+        }, 45000);
       }
-      else {
-        startTimer();
-      }
-    }
-
-    restartButton.onclick = function() {
-      pauseTimer();
-      switch(type) {
-        case 'coding': hours = 20;minutes = 0;seconds = 0;break;
-        case 'presentation': hours = 0;minutes = 5;seconds = 0;break;
-        case 'qustions': hours = 0;minutes = 3;seconds = 0;break;
-      }
-      reloadTimer();
-    }
-
-    codingOption.onclick = function() {
-      pauseTimer();
-      codingOption.classList.add('active');
-      presentationOption.classList.remove('active');
-      questionsOption.classList.remove('active');
-      type = 'coding';
-      hours = 20;
-      minutes = 0;
-      seconds = 0;
-      reloadTimer();
-    }
-
-    presentationOption.onclick = function() {
-      pauseTimer();
-      presentationOption.classList.add('active');
-      codingOption.classList.remove('active');
-      questionsOption.classList.remove('active');
-      type = 'presentation';
-      hours = 0;
-      minutes = 5;
-      seconds = 0;
-      reloadTimer();
-    }
-
-    questionsOption.onclick = function() {
-      pauseTimer();
-      questionsOption.classList.add('active');
-      codingOption.classList.remove('active');
-      presentationOption.classList.remove('active');
-      type = 'qustions';
-      hours = 0;
-      minutes = 3;
-      seconds = 0;
-      reloadTimer();
-    }
-
-    document.onmousemove = function() {
-      if(tools.classList.contains('hidden')) {
-        tools.classList.remove('hidden');
-        setTimeout(function() {
-          tools.classList.add('hidden');
-        }, 3000);
-      }
-      logosContainer.classList.add('hidden');
-      timer.classList.remove('hidden');
-    }
-
-    function showLogos() {
-      logosContainer.classList.remove('hidden');
-      timer.classList.add('hidden');
-
-      [].forEach.call(logos, function(logo, i) {
-        setTimeout(function() {
-          if(i) logos[i-1].classList.remove('active');
-          logo.classList.add('active');
-          if(i+1 == logos.length)
-            setTimeout(function() {
-              logo.classList.remove('active');
-            }, 3000);
-        }, 3000 * i);
-      });
-
-      setTimeout(function() {
-        logosContainer.classList.add('hidden');
-        timer.classList.remove('hidden');
-      }, 45000);
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
