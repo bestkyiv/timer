@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'Digital';
+  src: url('../digital-7.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes pulse {
+  0%, 100% {transform: scale(1)}
+  50% {transform: scale(1.06)}
+}
+
+body {
+  background: #DBE1D5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#logos.hidden {
+  transform: scale(0);
+  opacity: 0;
+
+}
+
+#logos {
+  width: 40vw;
+  height: 40vw;
+  margin-left: -20vw;
+  margin-top: -20vw;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: scale(1);
+  opacity: 1;
+  transition: all .5s ease-out;
+}
+
+#logos img {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity .4s ease-in-out;
+}
+
+#logos img.active {
+  opacity: 1;
+}
+
+#timer.hidden {
+  opacity: 0;
+}
+
+#timer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all .5s ease-out;
+}
+
+#clock {
+  font: 15vw 'Digital';
+  color: #ff0000;
+}
+
+#clock .digit {
+  display: inline-block;
+  width: 7vw;
+  text-align: right;
+}
+
+#background {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  margin-left: -50vw;
+  margin-top: -50vh;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background.animate {
+  animation: pulse 5s ease-in-out infinite;
+}
+
+#background > div {
+  position: absolute;
+  opacity: .5;
+}
+
+#background .circle.blue {
+  background: url(../circle-blue.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#background .circle.red {
+  background: url(../circle-red.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#background .triangle.blue {
+  background: url(../triangle-blue.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#background .triangle.red {
+  background: url(../triangle-red.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#tools {
+  top: 63vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 2vw 0;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+#tools.hidden {
+  opacity: 0;
+}
+
+#start, #restart {
+  width: 2w;
+  height: 2vw;
+  margin: .5vw;
+  cursor: pointer;
+}
+
+#start .pause {
+  display: none;
+}
+
+#start.started .play {
+  display: none;
+}
+
+#start.started .pause {
+  display: block;
+}
+
+#type {
+  margin: 0 .5vw;
+  font: 1vw 'Roboto';
+  display: flex;
+}
+
+#type .option {
+  color: #999;
+  cursor: pointer;
+  margin: .5vw;
+  align-items: center;
+}
+
+#type .option.active {
+  color: #ff0000;
+  font-weight: bold;
+}
