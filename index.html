@@ -7,6 +7,11 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>INT20H - Timer</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
     <link href="favicon.png" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -29,6 +34,10 @@
       <img src="logos/reprezent.svg" />
       <img src="logos/tv7-studio.svg" />
 
+      <img src="logos/burunduk.png" />
+      <img src="logos/yavereta.svg" />
+      <img src="logos/gtea.svg" />
+      <img src="logos/easy-drive.svg" />
       <img src="logos/jooble.svg" />
       <img src="logos/happy-monday.svg" />
       <img src="logos/best.svg" />
@@ -51,74 +60,22 @@
       <div id="tools" class="hidden">
         <div id="start">
           <div class="play">
-            <svg
-              width="1.5vw"
-              height="1.5vw"
-              version="1.1"
-              id="Capa_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 41.999 41.999"
-              style="enable-background: new 0 0 41.999 41.999"
-              xml:space="preserve"
-            >
-              <path
-                fill="#ffffff"
-                d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40
-              c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20
-              c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z"
-              />
-            </svg>
+            <span class="material-symbols-outlined"> play_arrow </span>
           </div>
           <div class="pause">
-            <svg
-              width="1.5vw"
-              height="1.5vw"
-              viewBox="-45 0 327 327"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill="#ffffff"
-                d="m158 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"
-              />
-              <path
-                fill="#ffffff"
-                d="m8 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"
-              />
-            </svg>
+            <span class="material-symbols-outlined"> pause </span>
           </div>
         </div>
         <div id="restart">
-          <svg
-            width="1.5vw"
-            height="1.5vw"
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 17.12 17.12"
-            style="enable-background: new 0 0 17.12 17.12"
-            xml:space="preserve"
-          >
-            <path
-              style="fill: #ffffff"
-              d="M8.661,0.001c0.006,0,0.01,0,0.01,0c0.007,0,0.007,0,0.011,0c0.002,0,0.007,0,0.009,0
-              c0,0,0,0,0.004,0c0.019-0.002,0.027,0,0.039,0c2.213,0,4.367,0.876,5.955,2.42l1.758-1.776c0.081-0.084,0.209-0.11,0.314-0.065
-              c0.109,0.044,0.186,0.152,0.186,0.271l-0.294,6.066h-5.699c-0.003,0-0.011,0-0.016,0c-0.158,0-0.291-0.131-0.291-0.296
-              c0-0.106,0.059-0.201,0.146-0.252l1.73-1.751c-1.026-0.988-2.36-1.529-3.832-1.529c-2.993,0.017-5.433,2.47-5.433,5.51
-              c0.023,2.978,2.457,5.4,5.481,5.422c1.972-0.106,3.83-1.278,4.719-3.221l2.803,1.293l-0.019,0.039
-              c-1.92,3.713-4.946,5.277-8.192,4.944c-4.375-0.348-7.848-4.013-7.878-8.52C0.171,3.876,3.976,0.042,8.661,0.001z"
-            />
-          </svg>
+          <span class="material-symbols-outlined"> restart_alt </span>
+        </div>
+        <div id="settings">
+          <span class="material-symbols-outlined"> settings </span>
         </div>
         <div id="type">
-          <div class="option coding active">coding</div>
-          <div class="option presentation">presentation</div>
-          <div class="option questions">questions</div>
+          <span class="option coding active">coding</span>
+          <span class="option presentation">presentation</span>
+          <span class="option questions">questions</span>
         </div>
       </div>
     </div>
@@ -130,9 +87,13 @@
       var hours = 20;
       var minutes = 00;
       var seconds = 00;
+      let initialHours = 20;
+      let initialMinutes = 00;
+      let initialSeconds = 00;
       var interval;
       var started = false;
       var type = "coding";
+      let settingsActive = false;
 
       var logosContainer = document.getElementById("logos");
       var logos = logosContainer.querySelectorAll("img");
@@ -145,6 +106,7 @@
       var tools = document.getElementById("tools");
       var startButton = document.getElementById("start");
       var restartButton = document.getElementById("restart");
+      const settingsButton = document.getElementById("settings");
       var codingOption = tools.querySelector("#type .option.coding");
       var presentationOption = tools.querySelector(
         "#type .option.presentation",
@@ -207,6 +169,37 @@
       }
 
       startButton.onclick = function () {
+        if (settingsActive) {
+          const hoursInput = document
+            .getElementById("hoursInput")
+            .value.padStart(2, "0");
+          const minutesInput = document
+            .getElementById("minutesInput")
+            .value.padStart(2, "0");
+          const secondsInput = document
+            .getElementById("secondsInput")
+            .value.padStart(2, "0");
+          hours = +hoursInput;
+          minutes = +minutesInput;
+          seconds = +secondsInput;
+          initialHours = hours;
+          initialMinutes = minutes;
+          initialSeconds = seconds;
+          clock.innerHTML = `<span class="hours"
+          ><span class="first digit">${hoursInput[0]}</span
+          ><span class="second digit">${hoursInput[1]}</span></span
+        >:<span class="minutes"
+          ><span class="first digit">${minutesInput[0]}</span
+          ><span class="second digit">${minutesInput[1]}</span></span
+        >:<span class="seconds"
+          ><span class="first digit">${secondsInput[0]}</span
+          ><span class="second digit">${secondsInput[1]}</span></span
+        >`;
+          hoursField = clock.querySelector(".hours");
+          minutesField = clock.querySelector(".minutes");
+          secondsField = clock.querySelector(".seconds");
+          settingsActive = false;
+        }
         if (started) {
           pauseTimer();
         } else {
@@ -218,13 +211,13 @@
         pauseTimer();
         switch (type) {
           case "coding":
-            hours = 20;
-            minutes = 0;
-            seconds = 0;
+            hours = initialHours;
+            minutes = initialMinutes;
+            seconds = initialSeconds;
             break;
           case "presentation":
             hours = 0;
-            minutes = 5;
+            minutes = 7;
             seconds = 0;
             break;
           case "qustions":
@@ -255,9 +248,21 @@
         questionsOption.classList.remove("active");
         type = "presentation";
         hours = 0;
-        minutes = 5;
+        minutes = 7;
         seconds = 0;
         reloadTimer();
+      };
+
+      settingsButton.onclick = function () {
+        pauseTimer();
+        settingsActive = true;
+        hoursField.classList.add(".hidden");
+        minutesField.classList.add(".hidden");
+        secondsField.classList.add(".hidden");
+        clock.innerHTML = `
+            <input id="hoursInput" autocomplete="off">
+            :<input id="minutesInput" autocomplete="off">
+            :<input id="secondsInput" autocomplete="off">`;
       };
 
       questionsOption.onclick = function () {
@@ -301,7 +306,7 @@
         setTimeout(function () {
           logosContainer.classList.add("hidden");
           timer.classList.remove("hidden");
-        }, 45000);
+        }, logos.length * 3000);
       }
     </script>
   </body>
